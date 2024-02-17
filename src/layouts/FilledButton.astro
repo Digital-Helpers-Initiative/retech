@@ -1,0 +1,17 @@
+---
+interface props {
+    text: String;
+}
+
+const props = Astro.props;
+---
+
+<button class="button font-body font-extrabold text-white py-[10px] px-5 rounded-[10px]">
+    {props.text}
+</button>
+
+<style>
+    .button {
+        background-color: #00ab6c;
+    }
+</style>

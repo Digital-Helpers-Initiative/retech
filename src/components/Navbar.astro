@@ -1,0 +1,48 @@
+---
+import retechLogo from "../assets/retech_logo.png";
+---
+
+<div class="flex green-background pt-8 px-12 justify-between">
+    <div class="flex items-center">
+        <div class="logo">
+            <img
+                src={retechLogo.src}
+                alt="Retech Logo"
+                height="88.5"
+                width="60"
+            />
+        </div>
+        <div class="p-1"></div>
+        <h1 class="text-2xl font-bold font-h4">RE-Tech</h1>
+    </div>
+    <div class="flex justify-center items-center">
+        <nav>
+            <ul class="flex items-center justify-end space-x-4">
+                <li><a href="/" class="font-navlink font-semibold">Home</a></li>
+                <li>
+                    <a href="services" class="font-navlink font-semibold">Services</a>
+                </li>
+                <li><a href="blog" class="font-navlink font-semibold">Blog</a></li>
+                <li>
+                    <a href="events" class="font-navlink font-semibold">Events</a>
+                </li>
+                <li>
+                    <a href="store" class="font-navlink font-semibold">Store</a>
+                </li>
+                <li>
+                    <a href="get-involved" class="font-navlink font-semibold"
+                        >Get Involved</a>
+                </li>
+                <li>
+                    <a href="about-us" class="font-navlink font-semibold">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<style>
+    .green-background {
+        background-color: #a2d5ab;
+    }
+</style>

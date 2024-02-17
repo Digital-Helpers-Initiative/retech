@@ -1,0 +1,37 @@
+---
+import Navbar from "../components/Navbar.astro";
+
+interface Props {
+    title: String;
+    description: String;
+}
+
+const props = Astro.props;
+---
+
+<div class="green-background justify-center items-center">
+    <Navbar />
+    <div class="p-10"></div>
+    <div class="flex justify-center items-center">
+        <div class="container flex justify-center items-center flex-col">
+            <h1 class="font-h1 text-6xl title-height">{props.title}</h1>
+            <div class="p-5"></div>
+            <p class="font-h4 text-2xl font-bold desc-width text-center">
+                {props.description}
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .green-background {
+        background-color: #a2d5ab;
+        height: 615px;
+    }
+    .title-height {
+        height: 72px;
+    }
+    .desc-width {
+        width: 628px;
+    }
+</style>
