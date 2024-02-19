@@ -5,6 +5,7 @@ export default {
 		extend: {
 			fontFamily: {
 				h1: ['"Bungee"', 'sans-serif'],
+				h2: ['"Crimson Text"', 'sans-serif'],
 				h4: ['"Space Mono"', 'mono'],
 				navlink: ['"Poppins"', 'sans-serif'],
 				body: ['"Poppins"', 'sans-serif'],

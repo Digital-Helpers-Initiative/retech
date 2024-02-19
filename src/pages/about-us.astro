@@ -3,8 +3,17 @@
 import '@fontsource/bungee';
 import '@fontsource/space-mono';
 import '@fontsource/poppins';
+import "@fontsource/crimson-text";
 
 import Header from "../layouts/Header.astro";
+import Footer from "../components/Footer.astro";
+import TeamCard from "../layouts/TeamCard.astro";
+
+// Team member photos
+import Rudra from "../assets/team/Rudra.png";
+import Vidit from "../assets/team/Vidit.png";
+import Anish from "../assets/team/Anish.png";
+import Aaradhya from "../assets/team/Aaradhya.png";
 ---
 
 <html lang="en">
@@ -17,5 +26,48 @@ import Header from "../layouts/Header.astro";
 	</head>
 	<body>
 		<Header title="About Us" description="Get to know the people behind this initiative and why they joined." />
+		<div class="flex flex-col items-center justify-center">
+			<div class="p-5"></div>
+			<div class="flex content justify-center items-center flex-col">
+				<p class="font-h2 text-5xl font-bold">Meet the Team</p>
+				<div class="p-5"></div>
+				<div class="flex content justify-between">
+					<TeamCard
+						title="Rudra Malatpure"
+						role="Founder + President"
+						desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+						img={Rudra}
+					/>
+					<TeamCard
+						title="Vidit Setty"
+						role="President of Operations"
+						desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+						img={Vidit}
+					/>
+					<TeamCard
+						title="Anish Vuddagiri"
+						role="Vice President of operations"
+						desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+						img={Anish}
+					/>
+					<TeamCard
+						title="Aaradhya Kumar"
+						role="Events Lead"
+						desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+						img={Aaradhya}
+					/>
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
+
+<style>
+    html {
+        background-color: #f3f1e1;
+    }
+    .content {
+        width: 86.95%;
+    }
+</style>

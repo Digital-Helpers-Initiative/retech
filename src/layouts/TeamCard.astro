@@ -1,0 +1,34 @@
+---
+interface props {
+    text: String;
+    role: String;
+    desc: String;
+    img: ImageMetadata;
+}
+
+const props = Astro.props;
+---
+
+<div class="card shadow-lg rounded-[10px]">
+    <img
+        src={props.img.src}
+        class="card-img-top rounded-t-[10px]"
+        alt="..."
+    />
+    <div class="py-2 px-4 flex flex-col">
+        <div>
+            <p class="font-h4 text-xl font-bold">{props.title}</p>
+            <p class="font-h1 text-xs">{props.role}</p>
+        </div>
+        <div class="py-1"></div>
+        <p class="font-body">{props.desc}</p>
+        <div class="p-2"></div>
+    </div>
+</div>
+
+<style>
+    .card {
+        width: 22.3%;
+        background-color: #e8e5d2;
+    }
+</style>

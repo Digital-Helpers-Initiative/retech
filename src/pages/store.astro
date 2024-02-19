@@ -1,21 +1,74 @@
 ---
 // Fonts
-import '@fontsource/bungee';
-import '@fontsource/space-mono';
-import '@fontsource/poppins';
+import "@fontsource/bungee";
+import "@fontsource/space-mono";
+import "@fontsource/poppins";
 
 import Header from "../layouts/Header.astro";
+import Card from "../layouts/Card.astro";
+import Footer from "../components/Footer.astro";
+import OfferUpLogo from "../assets/OfferUpLogo.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header title="Store" description="We offer a variety of different products across two platforms: " />
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body>
+        <Header
+            title="Store"
+            description="We offer a variety of different products across two platforms: "
+        >
+            <div class="p-5"></div>
+            <div class="flex justify-center items-center">
+                <OfferUpLogo />
+                <div class="px-5"></div>
+                <svg
+                    width="42"
+                    height="43"
+                    viewBox="0 0 42 43"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M41.8334 21.5C41.8334 9.99996 32.5001 0.666626 21.0001 0.666626C9.50008 0.666626 0.166748 9.99996 0.166748 21.5C0.166748 31.5833 7.33341 39.9791 16.8334 41.9166V27.75H12.6667V21.5H16.8334V16.2916C16.8334 12.2708 20.1042 8.99996 24.1251 8.99996H29.3334V15.25H25.1667C24.0209 15.25 23.0834 16.1875 23.0834 17.3333V21.5H29.3334V27.75H23.0834V42.2291C33.6042 41.1875 41.8334 32.3125 41.8334 21.5Z"
+                        fill="#34771F"></path>
+                </svg>
+            </div>
+        </Header>
+        <div class="flex flex-col justify-center items-center">
+            <div class="p-3"></div>
+            <div class="flex content justify-between">
+                <Card
+                    title="Product 1"
+                    desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+                />
+                <Card
+                    title="Product 2"
+                    desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+                />
+                <Card
+                    title="Product 3"
+                    desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+                />
+                <Card
+                    title="Product 4"
+                    desc="Lorem Ipsum dolor. consectetur adipiscing elit, "
+                />
+            </div>
+        </div>
+        <Footer />
+    </body>
 </html>
+
+<style>
+    html {
+        background-color: #f3f1e1;
+    }
+    .content {
+        width: 86.95%;
+    }
+</style>

@@ -1,0 +1,37 @@
+---
+interface props {
+    text: String;
+    desc: String;
+}
+
+const props = Astro.props;
+
+import placeholderImg from "../assets/placeholder_img.jpg";
+
+import FilledButton from "./FilledButton.astro";
+---
+
+<div class="card shadow-lg rounded-[10px]">
+    <img
+        src={placeholderImg.src}
+        class="card-img-top rounded-t-[10px]"
+        alt="..."
+    />
+    <div class="py-2 px-4 flex flex-col">
+        <p class="font-h4 text-xl font-bold">{props.title}</p>
+        <div class="py-1"></div>
+        <p class="font-body">{props.desc}</p>
+        <div class="py-3"></div>
+        <div class="self-center shadow-xl rounded-[10px]">
+            <FilledButton text="Learn More" />
+        </div>
+        <div class="p-1"></div>
+    </div>
+</div>
+
+<style>
+    .card {
+        width: 22.3%;
+        background-color: #e8e5d2;
+    }
+</style>
