@@ -5,6 +5,10 @@ import '@fontsource/space-mono';
 import '@fontsource/poppins';
 
 import Header from "../layouts/Header.astro";
+import TextInput from "../components/TextInput.astro";
+import TextArea from "../components/TextArea.astro";
+import FilledButton from '../layouts/FilledButton.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -17,5 +21,55 @@ import Header from "../layouts/Header.astro";
 	</head>
 	<body>
 		<Header title="Get Involved" description="Do you want to help us fulfill our mission? Please fill out this form to become a volunteer!" />
+		<div class="flex items-center justify-center">
+			<div class="flex flex-col items-center p-8 w-[53.046875%] self-center">
+				<div class="flex items-center w-[100%]">
+					<p class="font-h4 font-bold text-lg">Name: </p>
+					<div class="mx-8"></div>
+					<TextInput placeholder="Enter your name" />
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center w-[100%]">
+					<p class="font-h4 font-bold text-lg">Email: </p>
+					<div class="mx-8"></div>
+					<TextInput placeholder="Enter your email"/>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center self-start">
+					<p class="font-h4 font-bold text-lg">Where did you find us?</p>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center w-[100%]">
+					<TextInput placeholder="Please describe where you found our services"/>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center self-start">
+					<p class="font-h4 font-bold text-lg">Why would you like to join us?</p>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center w-[100%]">
+					<TextArea placeholder="Please describe why you would like to join as a volunteer"/>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center self-start">
+					<p class="font-h4 font-bold text-lg">What experience do you have?</p>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex items-center w-[100%]">
+					<TextArea placeholder="Please describe what experience you have"/>
+				</div>
+				<div class="py-6"></div>
+				<div class="flex items-center shadow-lg bg-transparent rounded-[10px]">
+					<FilledButton text="Submit" />
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
+
+<style>
+	html {
+		background-color: #F3F1E1;
+	}
+</style>

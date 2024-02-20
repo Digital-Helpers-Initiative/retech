@@ -1,10 +1,14 @@
 ---
 // Fonts
-import '@fontsource/bungee';
-import '@fontsource/space-mono';
-import '@fontsource/poppins';
+import "@fontsource/bungee";
+import "@fontsource/space-mono";
+import "@fontsource/poppins";
+import "@fontsource/crimson-text";
 
 import Header from "../layouts/Header.astro";
+import Footer from "../components/Footer.astro";
+import TextInput from "../components/TextInput.astro";
+import EventCard from "../components/EventCard.astro";
 ---
 
 <html lang="en">
@@ -16,6 +20,81 @@ import Header from "../layouts/Header.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<Header title="Upcoming Events" description="Sign up for events in your community to make a positive impact on the world." />
+		<Header
+			title="Upcoming Events"
+			description="Sign up for events in your community to make a positive impact on the world."
+		/>
+		<div class="flex flex-col items-center justify-center">
+			<div class="flex flex-col items-center justify-center w-[75%] p-8">
+				<div class="flex items-center w-[100%]">
+					<TextInput placeholder="Search for Events" />
+					<div class="p-1"></div>
+					<button
+						class="bg-black p-[7.5px] rounded-[15px] text-white flex items-center"
+					>
+						<svg
+							width="34"
+							height="34"
+							viewBox="0 0 34 34"
+							fill="#FFFFFF"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M27.7667 29.75L18.8417 20.825C18.1333 21.3917 17.3187 21.8403 16.3979 22.1708C15.4771 22.5014 14.4972 22.6667 13.4583 22.6667C10.8847 22.6667 8.70683 21.7751 6.92467 19.992C5.1425 18.2089 4.25094 16.031 4.25 13.4583C4.25 10.8847 5.14156 8.70683 6.92467 6.92467C8.70778 5.1425 10.8857 4.25094 13.4583 4.25C16.0319 4.25 18.2098 5.14156 19.992 6.92467C21.7742 8.70778 22.6657 10.8857 22.6667 13.4583C22.6667 14.4972 22.5014 15.4771 22.1708 16.3979C21.8403 17.3187 21.3917 18.1333 20.825 18.8417L29.75 27.7667L27.7667 29.75ZM13.4583 19.8333C15.2292 19.8333 16.7346 19.2133 17.9747 17.9733C19.2147 16.7332 19.8343 15.2282 19.8333 13.4583C19.8333 11.6875 19.2133 10.1821 17.9733 8.942C16.7332 7.70194 15.2282 7.08239 13.4583 7.08333C11.6875 7.08333 10.1821 7.70336 8.942 8.94342C7.70194 10.1835 7.08239 11.6884 7.08333 13.4583C7.08333 15.2292 7.70336 16.7346 8.94342 17.9747C10.1835 19.2147 11.6884 19.8343 13.4583 19.8333Z"
+								fill="#FFFFFF"></path>
+						</svg>
+						<p class="font-body px-1.5">Search</p>
+					</button>
+				</div>
+				<div class="flex justify-between items-center mt-8 w-[100%]">
+					<p class="text-3xl font-h2 font-bold">
+						Upcoming Events
+					</p>
+					<div class="">
+						<button>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+							</svg>
+						</button>
+						<button>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="w-[100%]">
+					<EventCard />
+					<EventCard />
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
+
+<style>
+	html {
+		background-color: #f3f1e1;
+	}
+</style>

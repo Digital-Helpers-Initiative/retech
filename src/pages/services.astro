@@ -1,10 +1,16 @@
 ---
 // Fonts
-import '@fontsource/bungee';
-import '@fontsource/space-mono';
-import '@fontsource/poppins';
+import "@fontsource/bungee";
+import "@fontsource/space-mono";
+import "@fontsource/poppins";
+import "@fontsource/crimson-text";
 
 import Header from "../layouts/Header.astro";
+import Footer from "../components/Footer.astro";
+import FilledButton from "../layouts/FilledButton.astro";
+
+import service1 from "../assets/service_1.png";
+import service2 from "../assets/service_2.png";
 ---
 
 <html lang="en">
@@ -16,6 +22,66 @@ import Header from "../layouts/Header.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<Header title="Services" description="We offer a variety of different services to cater to a diverse range of environmental tech cleanup activities." />
+		<Header
+			title="Services"
+			description="We offer a variety of different services to cater to a diverse range of environmental tech cleanup activities."
+		/>
+		<div class="flex justify-center items-center p-10">
+			<div class="flex flex-col items-center content w-[86.95%]">
+				<div class="flex justify-between">
+					<img
+						src={service1.src}
+						alt="Recycle bin logo"
+						width="46.5%"
+						class="rounded-[30px]"
+					/>
+					<div class="p-4"></div>
+					<div
+						class="flex flex-col justify-center w-[46.5%] items-center"
+					>
+						<p class="font-h2 py-8 text-[42px] font-bold">
+							Electronic Recycling
+						</p>
+						<p class="font-body text-center">
+							We host recycling events for electronic waste. We
+							sell what we can and responsibly recycle the rest.
+						</p>
+						<div class="py-8">
+							<FilledButton text="Learn More" />
+						</div>
+					</div>
+				</div>
+				<div class="p-4"></div>
+				<div class="flex justify-between">
+					<div
+						class="flex flex-col justify-center w-[46.5%] items-center"
+					>
+						<p class="font-h2 py-8 text-[42px] font-bold">
+							Workshops
+						</p>
+						<p class="font-body text-center">
+							We host online and in-person workshops that teach valuable technology skills such as repair, troubleshooting, and repurposing old tech.
+						</p>
+						<div class="py-8">
+							<FilledButton text="Learn More" />
+						</div>
+					</div>
+					<div class="p-4"></div>
+					<img
+						src={service2.src}
+						alt="Recycle bin logo"
+						width="46.5%"
+						class="rounded-[30px]"
+					/>
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
+
+<style>
+	html {
+		background-color: #f3f1e1;
+	}
+</style>

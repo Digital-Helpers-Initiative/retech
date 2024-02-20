@@ -1,0 +1,19 @@
+---
+interface props {
+    placeholder: String;
+}
+
+const props = Astro.props;
+---
+
+<input type="text" placeholder={props.placeholder} class="font-body text-sm">
+
+<style>
+    input {
+        flex: 1;
+        padding: 12.5px 12.5px;
+        border-radius: 15px;
+        border: 2px solid black;
+        background-color: transparent;
+    }
+</style>
