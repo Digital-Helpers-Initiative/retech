@@ -1,0 +1,29 @@
+---
+import placeholder_img  from "../assets/placeholder_img.jpg"
+
+let title = "Lorem ipsum";
+let date = "Sept 10th";
+let description =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, nisl nec tincidunt.";
+---
+
+<div class="flex gap-20 w-full justify-between">
+    <div class="flex flex-col gap-2 items-start">
+        <div class="flex gap-5 items-end">
+            <h1 class="font-h4 font-bold text-2xl">{title}</h1>
+            <p class="font-h1 text-sm mb-0.5">{date.toLocaleUpperCase()}</p>
+        </div>
+        <p>{description}</p>
+
+        <!-- button for "Read more" -->
+        <button class="font-h1 text-sm text-primary-500 hover:underline"
+            >Read more -></button
+        >
+    </div>
+    <!-- image -->
+    <img
+        class="w-44 rounded-md"
+        src={placeholder_img.src}
+        alt="placeholder"
+    />
+</div>
