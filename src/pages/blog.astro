@@ -1,11 +1,31 @@
 ---
 // Fonts
-import '@fontsource/bungee';
-import '@fontsource/space-mono';
-import '@fontsource/poppins';
+import "@fontsource/bungee";
+import "@fontsource/space-mono";
+import "@fontsource/poppins";
 
 import Header from "../layouts/Header.astro";
+import BlogCard from "../components/BlogCard.astro";
+import Footer from "../components/Footer.astro";
+
+var selected = 1;
 ---
+
+<script>
+	document.querySelectorAll("#buttonList button").forEach((item) => {
+		item.addEventListener("click", () => {
+			// Remove 'underline' class from all items
+			document.querySelectorAll("#buttonList button").forEach((item) => {
+				item.classList.remove("border-b-2");
+				item.classList.remove("-mb-0.5");
+			});
+
+			// Add 'underline' class to the clicked item
+			item.classList.add("border-b-2");
+			item.classList.add("-mb-0.5");
+		});
+	});
+</script>
 
 <html lang="en">
 	<head>
@@ -16,12 +36,35 @@ import Header from "../layouts/Header.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<Header title="Blog" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" />
+		<Header
+			title="Blog"
+			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+		/>
+		<div class="flex flex-col items-center justify-center">
+			<div class="flex flex-col items-center justify-center w-[67%] p-8">
+				<ul class="flex gap-3 self-start" id="buttonList">
+					<button class="font-body py-2 border-black border-b-2 -mb-0.5" id="button1">Lorem Ipsum</button>
+					<button class="font-body py-2 border-black" id="button2">Lorem Ipsum</button>
+					<button class="font-body py-2 border-black" id="button3">Lorem Ipsum</button>
+					<button class="font-body py-2 border-black" id="button4">Lorem Ipsum</button>
+					<button class="font-body py-2 border-black" id="button5">Lorem Ipsum</button>
+				</ul>
+				<div class="my-8"></div>
+				<BlogCard />
+				<div class="border-[0.5px] w-full border-black my-8"></div>
+				<BlogCard />
+				<div class="border-[0.5px] w-full border-black my-8"></div>
+				<BlogCard />
+				<div class="border-[0.5px] w-full border-black mt-8 -mb-10">
+				</div>
+			</div>
+		</div>
+		<Footer />
 	</body>
 </html>
 
 <style>
-    html {
-        background-color: #f3f1e1;
-    }
+	html {
+		background-color: #f3f1e1;
+	}
 </style>
